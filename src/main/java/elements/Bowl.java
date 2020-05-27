@@ -6,23 +6,21 @@ import elements.Game;
 import java.util.*;
 
 public class Bowl {
-    ArrayList<Name> namesInBowl = new ArrayList<Name>();
-    ArrayList<Player> players = new ArrayList<Player>();
+    ArrayList<Name> namesInBowl;
+    ArrayList<Player> players;
 
-    public void add(Name name){
-        this.namesInBowl.add(name);
+    Bowl(){
+        this.namesInBowl = new ArrayList<Name>();
+        this.players = new ArrayList<Player>();
     }
 
-    public static boolean guessName(Player guesser, Player target, Name name){
-        if(target.name.equals(name)){
-            target.nameGuessed = true;
-            guesser.slaves += 1;
-            if (guesser.slaves == this.namesInBowl.size()){
-                Game.winGame(guesser);
-            }
-            return true;
-        }
-        return false;
+    public void add(Name name){
+        this.namesInBowl.add(this.players.size(), name);
+
+    }
+
+    public int howManyNames(){
+        return this.namesInBowl.size();
     }
 
     public Name drawName(){

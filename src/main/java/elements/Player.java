@@ -1,25 +1,25 @@
 package elements;
 
-import java.util.*;
-import elements.Name;
-import elements.Bowl;
 import java.util.Random;
+
 public class Player {
+    Game game;
     boolean nameGuessed = false;
     Name name;
     int slaves = 0;
     int id;
 
-    Player(Name name){
+    Player(Game game, Name name){
         Random rand = new Random();
         int rand_int = rand.nextInt(1000);
         this.id = rand_int;
         this.name = name;
         this.nameGuessed = false;
         this.slaves = 0;
+        this.game = game;
     }
-    public Name name(){
-        return this.name;
+    public String name(){
+        return this.name.getName();
     }
 
     public boolean nameGuessed(){
@@ -31,7 +31,15 @@ public class Player {
     }
 
     public boolean guessPlayerName(Player player, Name name) {
-        return  Bowl.guessName(this, player, name);
+        boolean x  = this.game.guessName( player, name);
+        if(x) {
+            //boolean val from game
+            this.slaves++;
+            if (this.slaves == this.game.players) {
+                Game.winGame(this);
+            }
+        }
+        return x;
     }
 
 

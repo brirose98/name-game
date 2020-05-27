@@ -1,5 +1,6 @@
 package elements;
 import java.util.*;
+import elements.Rule;
 
 public class Name {
     String name;
@@ -8,8 +9,9 @@ public class Name {
         this.name = name;
     }
 
+
     public String getName() {
-        return this.name;
+        return this.name.toString();
     }
 
     public int length(){
@@ -19,8 +21,6 @@ public class Name {
     public char getLetter(int i){
         return name.charAt(i);
     }
-
-    public char[] getLetters(){return name.toCharArray();}
 
     @Override
     public boolean equals(Object o) {
