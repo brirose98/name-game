@@ -9,6 +9,6 @@ There are some Rules to this process. A player's name may not contain any number
 
 ## the simulation
 There are five classes that combine to simulate the game described above: Game, Bowl, Player, Name, and Rule. I hope this repository helps share this fun party game with others and they enjoy playing it as much as I have with my friends and family.
-# Todo
-## not implemented
+## Todo
+### not implemented
 Turn class to simulate a Player's turn in the game, enforcing the order of the player's turns, a player may only draw from the bowl once unless they guess correctly, a player's turn ends after an incorrect guess.
