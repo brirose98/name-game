@@ -15,7 +15,7 @@ public class Rule {
         for(int i = 0; i<name.length(); i++){
             nameLetters[i] = name.getLetter(i);
             if (badLetters.indexOf(nameLetters[i]) != -1){
-                System.out.println( "uhOh your Name has an illegal character!");
+             //   System.out.println( "uhOh your Name has an illegal character!");
                 return false;
             }
             else {
@@ -34,7 +34,7 @@ public class Rule {
             }
         }
         if(count > 3){
-            System.out.println("uhOn your name can only be 5 words long!");
+           // System.out.println("uhOn your name can only be 5 words long!");
             return false;
         }
         else{

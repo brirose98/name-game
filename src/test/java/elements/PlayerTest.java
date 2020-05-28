@@ -9,17 +9,15 @@ class PlayerTest {
     @Test
     void testName() {
         Game game = new Game();
-        Name name = new Name();
-        name.setName("sir blue demon");
+        Name name = new Name("sir blue demon");
         Player one = new Player(game, name);
-        assertEquals(name.getName(), one.name());
+        assertEquals(name.name, one.name());
     }
 
     @Test
     void testNameGuessed() {
         Game game = new Game();
-        Name name = new Name();
-        name.setName("St Vincent DePaul");
+        Name name = new Name("St Vincent DePaul");
         Player one = new Player(game,name);
         one.nameGuessed = true;
         assertEquals(true, one.nameGuessed());
@@ -28,8 +26,7 @@ class PlayerTest {
     @Test
     void testSlaves() {
         Game game = new Game();
-        Name name = new Name();
-        name.setName("St Vincent DePaul");
+        Name name = new Name("St Vincent DePaul");
         Player one = new Player(game, name);
         one.slaves += 1;
         assertEquals(1, one.slaves());
@@ -38,10 +35,8 @@ class PlayerTest {
     @Test
     void testGuessPlayerName() {
         Game game = new Game();
-        Name name = new Name();
-        Name name2 = new Name();
-        name2.setName("Dibs");
-        name.setName("St Vincent DePaul");
+        Name name = new Name("St Vincent DePaul");
+        Name name2 = new Name("Dibs");
         Player one = new Player(game, name);
         Player two = new Player(game, name2);
         game.addPlayer(one);
@@ -51,12 +46,9 @@ class PlayerTest {
     @Test
     void testGuessPlayerName2() {
         Game game = new Game();
-        Name name = new Name();
-        Name name2 = new Name();
-        Name name3 = new Name();
-        name3.setName("fake name");
-        name2.setName("Dibs");
-        name.setName("St Vincent DePaul");
+        Name name = new Name("St Vincent DePaul");
+        Name name2 = new Name("Dibs");
+        Name name3 = new Name("bowser");
         Player one = new Player(game, name);
         Player two = new Player(game, name2);
         game.addPlayer(one);

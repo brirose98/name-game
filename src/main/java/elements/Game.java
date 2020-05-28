@@ -31,14 +31,9 @@ public class Game {
             return false;
         }
     }
-    public static String winGame(Player player){
-        System.out.println(String.format("The Game has been won! Bow before your Ruler, Emperor %s", player.name()));
-        return endGame();
-    }
-
-    public static String endGame(){
-        System.out.println("The Game is now over.");
-        return "Goodbye!";
+    public static void winGame(Player player){
+       System.out.format("The Game has been won! Bow before your Ruler, Emperor %s!", player.name());
 
     }
+
 }

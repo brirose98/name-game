@@ -5,13 +5,8 @@ import elements.Rule;
 public class Name {
     String name;
 
-    public void setName(String name) {
+   Name(String name) {
         this.name = name;
-    }
-
-
-    public String getName() {
-        return this.name.toString();
     }
 
     public int length(){
@@ -30,6 +25,9 @@ public class Name {
         return Objects.equals(name, name1.name);
     }
 
-
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
 }
 

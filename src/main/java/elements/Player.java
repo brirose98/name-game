@@ -19,7 +19,7 @@ public class Player {
         this.game = game;
     }
     public String name(){
-        return this.name.getName();
+        return this.name.name;
     }
 
     public boolean nameGuessed(){
