@@ -9,14 +9,19 @@ public class Player {
     int slaves = 0;
     int id;
 
-    Player(Game game, Name name){
-        Random rand = new Random();
-        int rand_int = rand.nextInt(1000);
-        this.id = rand_int;
-        this.name = name;
-        this.nameGuessed = false;
-        this.slaves = 0;
-        this.game = game;
+    Player(Game game, Name name) {
+        Rule r = new Rule();
+        if (r.checkAllRules(name) == false) {
+            throw new IllegalArgumentException("Your name does not meet all the rules, try again");
+        } else {
+            Random rand = new Random();
+            int rand_int = rand.nextInt(1000);
+            this.id = rand_int;
+            this.name = name;
+            this.nameGuessed = false;
+            this.slaves = 0;
+            this.game = game;
+        }
     }
     public String name(){
         return this.name.name;

@@ -6,7 +6,7 @@ import elements.Bowl;
 import elements.Player;
 
 public class Rule {
-    String badLetters= "#*&^%$@()1234567890-_+=~`,./<>?!:;[{]}|   \n";
+    String badLetters= "#*&^%$@()1234567890-_+=~`,/<>?!:;[{]}|";
     boolean passedAll = false;
 
 
@@ -33,7 +33,7 @@ public class Rule {
                 count++;
             }
         }
-        if(count > 3){
+        if(count > 4){
            // System.out.println("uhOn your name can only be 5 words long!");
             return false;
         }

@@ -29,7 +29,7 @@ class RuleTest {
     @Test
     void checkNumWords() {
         Rule r = new Rule();
-        Name name = new Name("Billy Bob Joe Bob Joe");
+        Name name = new Name("Billy Bob Joe Bob Joe Bob");
         assertFalse(r.checkNumWords(name));
     }
 
@@ -42,7 +42,7 @@ class RuleTest {
     @Test
     void checkAllRules() {
         Rule r = new Rule();
-        Name name = new Name("Billy Bob Joe Bob Joe");
+        Name name = new Name("Billy Bob Joe Bob Joe Bob");
         assertFalse(r.checkAllRules(name));
     }
     @Test
